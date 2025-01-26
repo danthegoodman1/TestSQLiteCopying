@@ -34,7 +34,7 @@ def create_and_write_db():
     empty_conn.close()
     
     # Second connection to the copied database BEFORE copying
-    print("\nOpening second connection...")
+    print("\nOpening second connection in read-only mode...")
     conn2 = sqlite3.connect(f"file:{DB_COPY}?mode=ro", uri=True)
     cursor2 = conn2.cursor()
     
